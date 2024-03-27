@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <div className="py-24 text-center">
-      <p>Foodini 2024</p>
+    <div className="py-12 text-center">
+      <p>&copy; 2024 Foodini. All rights reserved.</p>
     </div>
   );
 }
