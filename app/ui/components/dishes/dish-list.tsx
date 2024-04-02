@@ -32,7 +32,7 @@ export default async function DishList() {
   const dishes = await getDishes();
 
   return (
-    <div className="bg-white">
+    <div className="bg-#FAFAFA">
       <div className="py-8 px-4 md:px-24">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {dishes.map((dish) => (
