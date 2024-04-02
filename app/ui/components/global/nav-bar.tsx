@@ -15,11 +15,11 @@ import { Button } from "@/app/ui/components/global/button";
 
 export function NavBar() {
   return (
-    <nav className="bg-[#FF9900] py-4 px-4 md:px-24 flex items-center justify-between space-x-8 md:space-x-12">
+    <nav className="bg-[#FAFAFA] py-4 px-4 md:px-24 flex items-center justify-between space-x-8 md:space-x-12">
       <div className="flex-none">
         <Link href="/">
           <Image
-            src="/foodini-logo.png"
+            src="/foodini-logo-gradient.png"
             width={60}
             height={50}
             alt="Foodini Logo"
@@ -30,46 +30,52 @@ export function NavBar() {
         <div className="relative">
           <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
           <Input
-            className=" pl-10 pr-4 py-2 w-full rounded-full"
+            className="pl-10 pr-4 py-2 w-full rounded-full"
             placeholder="Search for dishes, cuisines..."
             type="search"
           />
         </div>
       </div>
       <div className="flex space-x-8 hidden md:flex">
-        <Link className="text-white text-lg font-semibold" href="/">
+        <Link className="text-[#FF9900] text-lg font-semibold" href="/dishes">
           Dishes
         </Link>
         <Link
-          className="text-white text-lg font-semibold text-nowrap"
+          className="text-[#FF9900] text-lg font-semibold text-nowrap"
           href="/food_events"
         >
           Food Events
         </Link>
-        <Link className="text-white text-lg font-semibold" href="#">
+        <Link className="text-[#FF9900] text-lg font-semibold" href="/about">
           About
         </Link>
       </div>
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger asChild>
-            <Button size="icon" variant="default">
-              <MenuIcon className="text-white h-6 w-6" />
+            <Button size="icon" variant="secondary">
+              <MenuIcon className="text-[#FF9900] h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="right">
-            <div className="flex flex-col items-end space-y-4 py-8">
-              <Link className="text-[#FF9900] font-semibold" href="/">
+            <div className="flex flex-col items-end space-y-8 py-12">
+              <Link
+                className="text-[#FF9900] font-semibold text-xl"
+                href="/dishes"
+              >
                 Dishes
               </Link>
               <Link
-                className="text-[#FF9900] font-semibold"
+                className="text-[#FF9900] font-semibold text-xl"
                 href="/food_events"
               >
                 Food Events
               </Link>
-              <Link className="text-[#FF9900] font-semibold" href="#">
+              <Link
+                className="text-[#FF9900] font-semibold text-xl"
+                href="/about"
+              >
                 About
               </Link>
             </div>

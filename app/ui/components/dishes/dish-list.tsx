@@ -34,8 +34,7 @@ export default async function DishList() {
   return (
     <div className="bg-white">
       <div className="py-8 px-4 md:px-24">
-        <h2 className="text-2xl font-semibold mb-6">Discover Something New</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {dishes.map((dish) => (
             <Card key={dish.id} className="w-full">
               <Link href={`/dishes/${dish.name}`}>
