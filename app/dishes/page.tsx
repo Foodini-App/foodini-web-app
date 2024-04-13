@@ -1,3 +1,10 @@
+import DishList from "../ui/components/dishes/dish-list";
+
 export default function Page() {
-  return <p>Dishes</p>;
+  return (
+    <div>
+      
+      <DishList />
+    </div>
+  );
 }

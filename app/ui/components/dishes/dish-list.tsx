@@ -1,35 +1,10 @@
-import { createClient } from "@/utils/supabase/server";
+import { getPopularDishes } from "@/utils/dish-utils";
 import { Card, CardContent } from "@/app/ui/components/dishes/card";
-import { capitalize, formatList } from "@/utils/global-utils/utils";
+import { capitalize, formatList } from "@/utils/global-utils";
 import Link from "next/link";
 
-type Dish = {
-  id: number;
-  name: string;
-  cuisine: string[];
-  images: string[];
-};
-
-/**
- * Retrieves a list of dishes from the database.
- * @returns A promise that resolves to an array of Dish objects.
- * @throws An error if there was a problem fetching the dishes.
- */
-async function getDishes(): Promise<Dish[]> {
-  const supabase = createClient();
-  const { data: dishes, error } = await supabase
-    .from("dishes")
-    .select("id, name, cuisine, images"); // Specify the fields you want to retrieve
-
-  if (error) {
-    throw new Error(`Error fetching dishes: ${error}`);
-  }
-
-  return dishes;
-}
-
 export default async function DishList() {
-  const dishes = await getDishes();
+  const dishes = await getPopularDishes();
 
   return (
     <div className="bg-#FAFAFA">

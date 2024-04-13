@@ -8,7 +8,7 @@ export default async function Index() {
       <DishList />
       <div style={{ display: "flex", justifyContent: "center" }}>
         <iframe
-          src="https://lu.ma/embed/calendar/cal-1LXH22G3Y46ZLr9/events"
+          src="https://lu.ma/embed/calendar/cal-1LXH22G3Y46ZLr9/events?"
           width="800"
           height="450"
           style={{
