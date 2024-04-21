@@ -1,7 +1,7 @@
 import { createClient } from "@/utils/supabase/server";
 import { underscoreToSpace } from "./global-utils";
 
-type DishBasicInfo = {
+export type DishBasicInfo = {
   id: number;
   name: string;
   cuisine: string[];

@@ -1,9 +1,14 @@
-import { getPopularDishes } from "@/utils/dish-utils";
+import { DishBasicInfo } from "@/utils/dish-utils";
 import { DishCard, CardContent } from "@/app/ui/components/dishes/dish-card";
 import { capitalize, formatList } from "@/utils/global-utils";
 
-export default async function DishList() {
-  const dishes = await getPopularDishes();
+// type ListType = "popular" | "search";
+interface DishListProps {
+  dishes: DishBasicInfo[];
+}
+
+export default async function DishList(props: DishListProps) {
+  const dishes = props.dishes;
 
   return (
     <div className="bg-#FAFAFA">

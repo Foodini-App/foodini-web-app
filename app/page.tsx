@@ -1,11 +1,14 @@
 import DishList from "@/app/ui/components/dishes/dish-list";
 import Hero from "./ui/components/hero";
+import { getPopularDishes } from "@/utils/dish-utils";
 
 export default async function Index() {
+  const dishes = await getPopularDishes();
+
   return (
-    <div className="flex-1 w-full flex flex-col gap-10 bg-#FAFAFA">
+    <div className="flex-1 w-full flex flex-col md:gap-10 bg-#FAFAFA">
       <Hero />
-      <DishList />
+      <DishList dishes={dishes} />
       <div style={{ display: "flex", justifyContent: "center" }}>
         <iframe
           src="https://lu.ma/embed/calendar/cal-1LXH22G3Y46ZLr9/events?"

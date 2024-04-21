@@ -18,7 +18,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         search: { value: string };
       };
       const search = target.search.value;
-      router.push(`/dishes/search=${search}`);
+      router.push(`/dishes/search?q=${search}`);
     };
 
     return (
