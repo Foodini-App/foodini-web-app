@@ -1,8 +1,8 @@
 import React from "react";
 import { getDish } from "@/utils/dish-utils";
 import { capitalize, capitalizeList } from "@/utils/global-utils";
-import { SheetTrigger, SheetContent, Sheet } from "../global/sheet";
-import { Button } from "../global/button";
+import { SheetTrigger, SheetContent, Sheet, SheetClose } from "../global/sheet";
+import { Button, CloseButton } from "../global/button";
 
 interface DishInfoProps {
   // Define the props for your component here
@@ -137,9 +137,9 @@ function DishInfoOverlay() {
         </Button>
       </SheetTrigger>
       <SheetContent side="right">
-        <div className="flex flex-col items-end space-y-8 py-12">
-          Content of div
-        </div>
+        <SheetClose>
+          <CloseButton />
+        </SheetClose>
       </SheetContent>
     </Sheet>
   );

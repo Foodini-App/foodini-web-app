@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
+import { X } from "lucide-react";
 
 import { cn } from "@/app/lib/utils";
 
@@ -58,4 +59,18 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+const CloseButton = ({ onClick }: { onClick?: () => void }) => {
+  return (
+    <Button
+      size="icon"
+      variant="secondary"
+      className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 dark:data-[state=open]:bg-gray-800"
+      onClick={onClick}
+    >
+      <X className="h-8 w-8" />
+      <span className="sr-only">Close</span>
+    </Button>
+  );
+};
+
+export { Button, buttonVariants, CloseButton };
