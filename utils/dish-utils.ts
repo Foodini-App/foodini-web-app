@@ -29,7 +29,7 @@ export async function getPopularDishes(): Promise<DishBasicInfo[]> {
   let { data: dishes, error } = await supabase
     .from("dishes")
     .select("id, name, cuisine, images")
-    .gt("popularity", 3.8);
+    .gt("popularity", 3.0);
 
   if (error) {
     throw new Error(`Error fetching dishes: ${error}`);

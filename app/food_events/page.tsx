@@ -3,7 +3,7 @@ import { Button } from "../ui/components/global/button";
 
 export default function Page() {
   return (
-    <div className="flex flex-col md:items-center gap-8">
+    <div className="flex flex-col md:items-center gap-4">
       <Header name="Food Events" />
       <div className="px-4 md:px-24 space-y-4">
         <Button
