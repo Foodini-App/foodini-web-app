@@ -21,7 +21,7 @@ export function NavBar() {
   useEffect(() => (isOpen ? setIsOpen(false) : void null), [pathname]);
 
   return (
-    <nav className="bg-[#FAFAFA] py-4 px-4 md:px-24 flex items-center justify-between space-x-8 md:space-x-12">
+    <nav className="sticky top-0 z-50 bg-white py-4 px-4 md:px-24 flex items-center justify-between space-x-8 md:space-x-12">
       <div className="flex-none">
         <Link href="/">
           <Image

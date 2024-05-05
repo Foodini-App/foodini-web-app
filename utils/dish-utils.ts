@@ -24,12 +24,14 @@ type Dish = DishBasicInfo & {
  * @returns A promise that resolves to an array of Dish objects.
  * @throws An error if there was a problem fetching the dishes.
  */
-export async function getPopularDishes(): Promise<DishBasicInfo[]> {
+export async function getPopularDishes(
+  popularity: number = 3.0
+): Promise<DishBasicInfo[]> {
   const supabase = createClient();
   let { data: dishes, error } = await supabase
     .from("dishes")
     .select("id, name, cuisine, images")
-    .gt("popularity", 3.0);
+    .gt("popularity", popularity);
 
   if (error) {
     throw new Error(`Error fetching dishes: ${error}`);
@@ -68,16 +70,15 @@ export async function getDishesFromCuisine(
  */
 export async function searchDishes(query: string): Promise<DishBasicInfo[]> {
   const supabase = createClient();
-  let { data: dishes, error } = await supabase
-    .from("dishes")
-    .select("id, name, cuisine, images")
-    .textSearch("name", query);
+  let { data, error } = await supabase.rpc("search_dishes", {
+    search_term: query,
+  });
 
   if (error) {
     throw new Error(`Error fetching dishes: ${error}`);
   }
 
-  return dishes as DishBasicInfo[]; // Add type assertion
+  return data as DishBasicInfo[]; // Add type assertion
 }
 
 export async function getDish(query: string): Promise<Dish> {

@@ -12,7 +12,7 @@ export default async function DishList(props: DishListProps) {
 
   return (
     <div className="bg-#FAFAFA">
-      <div className="py-8 px-4 md:px-24">
+      <div className="pt-2 md:pt-4 px-4 md:px-24">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {dishes.map((dish) => (
             <DishCard key={dish.id} dishName={dish.name} className="w-full">

@@ -1,26 +1,29 @@
 import DishList from "@/app/ui/components/dishes/dish-list";
 import Hero from "./ui/components/hero";
 import { getPopularDishes } from "@/utils/dish-utils";
+import { Header } from "./ui/components/global/header";
+import LumaCalendar from "./ui/components/food_events/luma-calendar";
 
 export default async function Index() {
-  const dishes = await getPopularDishes();
+  return (
+    <div className="flex-1 w-full flex flex-col bg-#FAFAFA">
+      <Hero />
+      <TrendingDishes />
+      <Header name="Upcoming Food Events" />
+      <div className="flex flex-col md:items-center pt-2 md:pt-4">
+        <LumaCalendar />
+      </div>
+    </div>
+  );
+}
+
+async function TrendingDishes() {
+  const dishes = await getPopularDishes(3.8);
 
   return (
-    <div className="flex-1 w-full flex flex-col md:gap-10 bg-#FAFAFA">
-      <Hero />
+    <div>
+      <Header name="Trending Dishes" />
       <DishList dishes={dishes} />
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <iframe
-          src="https://lu.ma/embed/calendar/cal-1LXH22G3Y46ZLr9/events?"
-          width="800"
-          height="450"
-          style={{
-            border: "1px solid #bfcbda88",
-            borderRadius: "4px",
-          }}
-          aria-hidden="false"
-        ></iframe>
-      </div>
     </div>
   );
 }
