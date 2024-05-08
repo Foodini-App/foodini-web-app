@@ -48,9 +48,9 @@ export function NavBar() {
         </Link>
         <Link
           className="text-[#FF9900] text-lg font-semibold text-nowrap"
-          href="/food_events"
+          href="/food_fairs"
         >
-          Food Events
+          Food Fairs
         </Link>
         <Link className="text-[#FF9900] text-lg font-semibold" href="/about">
           About
@@ -83,10 +83,10 @@ export function NavBar() {
               </Link>
               <Link
                 className="text-[#FF9900] font-semibold text-xl"
-                href="/food_events"
+                href="/food_fairs"
                 onClick={() => setIsOpen(!isOpen)}
               >
-                Food Events
+                Food Fairs
               </Link>
               <Link
                 className="text-[#FF9900] font-semibold text-xl"

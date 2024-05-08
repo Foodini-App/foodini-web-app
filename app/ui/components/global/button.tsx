@@ -36,6 +36,7 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   href?: string;
+  newTab?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -49,7 +50,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {props.href ? (
-          <a href={props.href}>{props.children}</a>
+          <a href={props.href} target={props.newTab ? "_blank" : "_self"}>
+            {props.children}
+          </a>
         ) : (
           props.children
         )}

@@ -10,13 +10,13 @@ export default function Hero() {
             Discover new foods with confidence
           </div>
           <div className="text-sm md:text-lg lg:text-xl font-medium text-white pt-2 pb-4 lg:pb-12">
-            Foodini helps you navigate local food events
+            Foodini helps you navigate local food fairs
           </div>
           <Button
             size="default"
             variant="blue"
             className="bg-blue-500 text-white px-6 py-4 rounded-md"
-            href="/food_events"
+            href="/food_fairs"
           >
             Find a Food Fair
           </Button>
