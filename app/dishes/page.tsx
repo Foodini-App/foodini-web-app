@@ -43,7 +43,7 @@ const cuisines = [
 ];
 
 export default async function Page() {
-  const dishes = await getPopularDishes(3.0);
+  const dishes = await getPopularDishes(3.8);
 
   return (
     <div>

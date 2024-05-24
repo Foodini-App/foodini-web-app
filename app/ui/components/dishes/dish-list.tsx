@@ -1,6 +1,6 @@
 import { DishBasicInfo } from "@/utils/dish-utils";
 import { DishCard, CardContent } from "@/app/ui/components/dishes/dish-card";
-import { capitalize, formatList } from "@/utils/global-utils";
+import { capitalize, capitalizeList } from "@/utils/global-utils";
 
 // type ListType = "popular" | "search";
 interface DishListProps {
@@ -46,7 +46,7 @@ export default async function DishList(props: DishListProps) {
                   {capitalize(dish.name)}
                 </h3>
                 <p className="text-sm text-gray-600">
-                  {formatList(dish.cuisine)}
+                  {capitalizeList(dish.cuisine).join(", ")}
                 </p>
               </CardContent>
             </DishCard>

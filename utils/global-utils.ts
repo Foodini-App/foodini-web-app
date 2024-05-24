@@ -1,12 +1,3 @@
-export function formatList(strings: string[]): string {
-  const formattedStrings = strings.map(
-    (str) => str.charAt(0).toUpperCase() + str.slice(1)
-  );
-  const commaSeparatedList = formattedStrings.join(", ");
-
-  return commaSeparatedList; // Return the comma-separated list as a string
-}
-
 export function capitalize(string: string): string {
   const words = string.split(" ");
   const capitalizedWords = words.map((word) => {
@@ -35,5 +26,5 @@ export function capitalizeList(list: string[]): string[] {
   for (let i = 0; i < list.length; i++) {
     list[i] = capitalize(list[i]);
   }
-  return list
+  return list;
 }
