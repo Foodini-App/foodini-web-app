@@ -18,7 +18,7 @@ export default async function Index() {
 }
 
 async function TrendingDishes() {
-  const dishes = await getPopularDishes(4.0);
+  const dishes = await getPopularDishes(4.2, 8);
 
   return (
     <div>
