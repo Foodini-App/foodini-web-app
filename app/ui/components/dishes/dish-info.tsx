@@ -26,7 +26,7 @@ const DishInfo: React.FC<DishInfoProps> = async (props) => {
           <DishImageContainer imageUrl={dish.images[0]} />
           <DishNameContainer dishName={dish.name} tooltip={true}>
             <div className="text-lg">
-              <div>{dish.traditional_name}</div>
+              <div><em>{dish.traditional_name}</em></div>
               <div>{capitalizeList(dish.cuisine).join(", ")}</div>
             </div>
           </DishNameContainer>
@@ -40,14 +40,12 @@ const DishInfo: React.FC<DishInfoProps> = async (props) => {
           >
             {dish.ingredients
               ? capitalizeList(dish.ingredients).join(", ")
-              : "Ingredients not available"}
+              : "Not Available"}
           </DishInfoContainer>
 
-          <DishInfoContainer title="Common Allergens" disclaimer={true}>
-            {dish.allergens
-              ? capitalizeList(dish.allergens).join(", ")
-              : "No major allergens"}
-          </DishInfoContainer>
+          {dish.allergens && (<DishInfoContainer title="Common Allergens" disclaimer={true}>
+            {capitalizeList(dish.allergens).join(", ")}
+          </DishInfoContainer>)}
 
           {dish.alternate_names && (
             <DishInfoContainer title="Alternate Names" tooltip={true}>
