@@ -1,11 +1,8 @@
-import { FoodiniIcon } from "../ui/components/global/foodini-icon";
-import { Header } from "../ui/components/global/header";
-
-export default function Page() {
+const Page: React.FC = () => {
   return <About />;
 }
 
-function About() {
+const About: React.FC = () => {
   return (
     <div className="bg-white md:mx-24 md:my-12 rounded-xl overflow-hidden text-gray-700">
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -47,3 +44,5 @@ function About() {
     </div>
   );
 }
+
+export default Page;

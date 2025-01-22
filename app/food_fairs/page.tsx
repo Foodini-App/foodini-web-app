@@ -1,11 +1,12 @@
-import { Header } from "../ui/components/global/header";
+import Header from "../ui/components/global/header";
 import { Button } from "../ui/components/global/button";
 import LumaCalendar from "../ui/components/food_fairs/luma-calendar";
+import FoodFairCalendar from "../ui/components/food_fairs/food-fair-calendar";
 
 export default function Page() {
   return (
-    <div className="flex flex-col md:items-center gap-4">
-      <Header name="Food Fairs" />
+    <div className="flex flex-col lg:items-center gap-4">
+      {/* <Header name="Food Fairs" />
       <div className="px-4 md:px-24">
         <Button
           size="default"
@@ -16,8 +17,9 @@ export default function Page() {
         >
           View map
         </Button>
-      </div>
-      <LumaCalendar />
+      </div> */}
+      {/* <LumaCalendar /> */}
+      <FoodFairCalendar />
     </div>
   );
 }

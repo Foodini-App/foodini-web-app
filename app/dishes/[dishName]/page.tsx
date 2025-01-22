@@ -1,5 +1,7 @@
 import DishInfo from "@/app/ui/components/dishes/dish-info";
 
-export default function Page({ params }: { params: { dishName: string } }) {
+const Page: React.FC<{ params: { dishName: string } }> = ({ params }) => {
   return <DishInfo name={params.dishName} />;
 }
+
+export default Page;

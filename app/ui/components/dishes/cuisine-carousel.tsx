@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { capitalize } from "@/utils/global-utils";
 
-export function CuisineCarousel({ cuisines }: { cuisines: any[] }) {
+const CuisineCarousel: React.FC<{ cuisines: any[] }> = ({ cuisines }) => {
   const settings = {
     dots: true,
     arrows: false,
@@ -75,42 +75,4 @@ export function CuisineCarousel({ cuisines }: { cuisines: any[] }) {
   );
 }
 
-// export function CuisineCarousel({ cuisines }: { cuisines: any[] }) {
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
-//   const carouselScroll = () => {
-//     if (currentIndex == cuisines.length - 1) {
-//       return setCurrentIndex(0);
-//     }
-//     return setCurrentIndex(currentIndex + 1);
-//   };
-
-//   useEffect(() => {});
-
-//   return (
-//     <div className="pt-8 px-4 md:px-24">
-//       <div className="flex flex-row gap-8">
-//         {cuisines.map((cuisine) => {
-//           const link = "/dishes/search?q=" + cuisine.name;
-//           return (
-//             <div key={cuisine.id}>
-//               <Link
-//                 href={link}
-//                 className="flex flex-col items-center justify-center"
-//               >
-//                 <img
-//                   src={cuisine.image}
-//                   alt={cuisine.name}
-//                   className="h-32 w-32 object-cover rounded-full"
-//                 />
-//                 <div className="text-lg font-semibold text-gray-900">
-//                   {cuisine.name}
-//                 </div>
-//               </Link>
-//             </div>
-//           );
-//         })}
-//       </div>
-//     </div>
-//   );
-// }
+export default CuisineCarousel;
