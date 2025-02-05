@@ -1,6 +1,6 @@
 import DishList from "../ui/components/dishes/DishList";
 import { getPopularDishes } from "@/utils/dish-utils";
-import Header from "../ui/components/global/Header";
+import Header from "../ui/components/global/Headerr";
 import CuisineCarousel from "../ui/components/dishes/CuisineCarousel";
 
 const cuisines = [

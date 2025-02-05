@@ -1,6 +1,6 @@
 "use client";
 
-import { Input } from "@/app/ui/components/global/Input";
+import { Input } from "@/app/ui/components/global/Inputt";
 import Image from "next/image";
 import Link from "next/link";
 import { JSX, SVGProps } from "react";
@@ -9,8 +9,8 @@ import {
   SheetContent,
   Sheet,
   SheetClose,
-} from "@/app/ui/components/global/Sheet";
-import { Button, CloseButton } from "@/app/ui/components/global/Button";
+} from "@/app/ui/components/global/Sheett";
+import { Button, CloseButton } from "@/app/ui/components/global/Buttonn";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 

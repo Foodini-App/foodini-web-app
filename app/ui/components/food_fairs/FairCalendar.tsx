@@ -1,5 +1,5 @@
 import { FairDate, getFairEvents } from "@/utils/fairs-utils";
-import Icon from "@/app/ui/components/global/Icon";
+import Icon from "@/app/ui/components/global/Iconn";
 
 import { FairCard } from "./FairCard";
 import { CardContent } from "../dishes/DishCard";

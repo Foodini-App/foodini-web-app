@@ -1,4 +1,4 @@
-import Icon from "@/app/ui/components/global/Icon";
+import Icon from "@/app/ui/components/global/Iconn";
 import { getFair } from "@/utils/fairs-utils";
 import { capitalize } from "@/utils/global-utils";
 import Link from "next/link";
@@ -8,8 +8,8 @@ import {
   Sheet,
   SheetClose,
   SheetHeader,
-} from "../global/Sheet";
-import { Button, CloseButton } from "../global/Button";
+} from "../global/Sheett";
+import { Button, CloseButton } from "../global/Buttonn";
 
 const FoodFairDatesOverlay: React.FC<{
   future_dates: { start_time: number; end_time: number }[];
