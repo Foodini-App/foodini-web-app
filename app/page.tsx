@@ -1,8 +1,8 @@
-import DishList from "@/app/ui/components/dishes/dish-list";
-import Hero from "./ui/components/hero";
+import DishList from "@/app/ui/components/dishes/DishList";
+import Hero from "./ui/components/Hero";
 import { getPopularDishes } from "@/utils/dish-utils";
-import Header from "./ui/components/global/header";
-import LumaCalendar from "./ui/components/food_fairs/luma-calendar";
+import Header from "./ui/components/global/Header";
+import LumaCalendar from "./ui/components/food_fairs/LumaCalendar";
 
 export default async function Index() {
   return (

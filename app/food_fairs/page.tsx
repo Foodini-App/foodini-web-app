@@ -1,7 +1,7 @@
-import Header from "../ui/components/global/header";
-import { Button } from "../ui/components/global/button";
-import LumaCalendar from "../ui/components/food_fairs/luma-calendar";
-import FoodFairCalendar from "../ui/components/food_fairs/food-fair-calendar";
+import Header from "../ui/components/global/Header";
+import { Button } from "../ui/components/global/Button";
+import LumaCalendar from "../ui/components/food_fairs/LumaCalendar";
+import FairCalendar from "../ui/components/food_fairs/FairCalendar";
 
 export default function Page() {
   return (
@@ -19,7 +19,7 @@ export default function Page() {
         </Button>
       </div> */}
       {/* <LumaCalendar /> */}
-      <FoodFairCalendar />
+      <FairCalendar />
     </div>
   );
 }

@@ -1,6 +1,6 @@
-import DishList from "../../ui/components/dishes/dish-list";
+import DishList from "../../ui/components/dishes/DishList";
 import { searchDishes } from "@/utils/dish-utils";
-import Header from "@/app/ui/components/global/header";
+import Header from "@/app/ui/components/global/Header";
 
 const Page: React.FC<{
   searchParams: {

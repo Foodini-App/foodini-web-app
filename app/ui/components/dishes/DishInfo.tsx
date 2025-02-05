@@ -7,11 +7,10 @@ import {
   Sheet,
   SheetClose,
   SheetHeader,
-} from "../global/sheet";
-import { Button, CloseButton } from "../global/button";
+} from "../global/Sheet";
+import { Button, CloseButton } from "../global/Button";
 import Link from "next/link";
-import Icon from "../global/icon";
-
+import Icon from "@/app/ui/components/global/Icon";
 interface DishInfoProps {
   name: string;
 }
@@ -26,7 +25,9 @@ const DishInfo: React.FC<DishInfoProps> = async (props) => {
           <DishImageContainer imageUrl={dish.images[0]} />
           <DishNameContainer dishName={dish.name} tooltip={true}>
             <div className="text-lg">
-              <div><em>{dish.traditional_name}</em></div>
+              <div>
+                <em>{dish.traditional_name}</em>
+              </div>
               <div>{capitalizeList(dish.cuisine).join(", ")}</div>
             </div>
           </DishNameContainer>
@@ -43,9 +44,11 @@ const DishInfo: React.FC<DishInfoProps> = async (props) => {
               : "Not Available"}
           </DishInfoContainer>
 
-          {dish.allergens && (<DishInfoContainer title="Common Allergens" disclaimer={true}>
-            {capitalizeList(dish.allergens).join(", ")}
-          </DishInfoContainer>)}
+          {dish.allergens && (
+            <DishInfoContainer title="Common Allergens" disclaimer={true}>
+              {capitalizeList(dish.allergens).join(", ")}
+            </DishInfoContainer>
+          )}
 
           {dish.alternate_names && (
             <DishInfoContainer title="Alternate Names" tooltip={true}>

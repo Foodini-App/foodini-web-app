@@ -1,8 +1,8 @@
 import { FairDate, getFairEvents } from "@/utils/fairs-utils";
-import Icon from "../global/icon";
+import Icon from "@/app/ui/components/global/Icon";
 
-import { FairCard } from "./fair-card";
-import { CardContent } from "../dishes/dish-card";
+import { FairCard } from "./FairCard";
+import { CardContent } from "../dishes/DishCard";
 import { capitalize } from "@/utils/global-utils";
 
 interface FoodFairCardProps {
@@ -54,7 +54,7 @@ const FoodFairCard: React.FC<FoodFairCardProps> = ({ fair_date, date }) => {
   );
 };
 
-const FoodFairCalendar: React.FC = async () => {
+const FairCalendar: React.FC = async () => {
   const fair_dates = await getFairEvents();
 
   return (
@@ -98,4 +98,4 @@ const FoodFairCalendar: React.FC = async () => {
   );
 };
 
-export default FoodFairCalendar;
+export default FairCalendar;

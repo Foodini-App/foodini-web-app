@@ -1,6 +1,6 @@
-import { Button } from "./global/button";
+import { Button } from "./global/Button";
 
-const Hero:React.FC = () => {
+const Hero: React.FC = () => {
   return (
     <div className="grid grid-cols-3">
       <div className="col-span-2 place-content-center bg-orange-500 border-r-8 border-white">
@@ -30,6 +30,6 @@ const Hero:React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Hero;

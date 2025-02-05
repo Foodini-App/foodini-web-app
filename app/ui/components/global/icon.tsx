@@ -296,7 +296,7 @@ const Icon: React.FC<IconProps> = ({
   color = "currentColor",
   className = "",
 }) => {
-  const SelectedIcon = iconMap[name];
+  const SelectedIcon = iconMap[name] || iconMap['toolTip']; // Use a default icon if the name is invalid
 
   if (!SelectedIcon) {
     console.warn(`Icon "${name}" does not exist.`);

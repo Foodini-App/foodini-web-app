@@ -1,4 +1,4 @@
-import Icon from "@/app/ui/components/global/icon";
+import Icon from "@/app/ui/components/global/Icon";
 import { getFair } from "@/utils/fairs-utils";
 import { capitalize } from "@/utils/global-utils";
 import Link from "next/link";
@@ -8,8 +8,8 @@ import {
   Sheet,
   SheetClose,
   SheetHeader,
-} from "../global/sheet";
-import { Button, CloseButton } from "../global/button";
+} from "../global/Sheet";
+import { Button, CloseButton } from "../global/Button";
 
 const FoodFairDatesOverlay: React.FC<{
   future_dates: { start_time: number; end_time: number }[];
@@ -111,7 +111,7 @@ interface FoodFairInfoProps {
   id: number;
 }
 
-const FoodFairInfo: React.FC<FoodFairInfoProps> = async (props) => {
+const FairInfo: React.FC<FoodFairInfoProps> = async (props) => {
   const fair = await getFair(props.id);
   const color = fair.color ? fair.color : "gray-600";
   const bg_color = `bg-${color}`;
@@ -195,4 +195,4 @@ const FoodFairInfo: React.FC<FoodFairInfoProps> = async (props) => {
   );
 };
 
-export default FoodFairInfo;
+export default FairInfo;

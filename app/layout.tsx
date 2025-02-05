@@ -1,6 +1,6 @@
 import { GeistSans } from "geist/font/sans";
-import { NavBar } from "@/app/ui/components/global/nav-bar";
-import Footer from "./ui/components/global/footer";
+import { NavBar } from "@/app/ui/components/global/NavBar";
+import Footer from "./ui/components/global/Footer";
 import "./globals.css";
 
 const defaultUrl = process.env.VERCEL_URL
