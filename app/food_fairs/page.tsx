@@ -1,5 +1,5 @@
 import Header from "../ui/components/global/Header";
-import { Button } from "../ui/components/global/Button";
+import { Button } from "../ui/components/global/Buttonn";
 import LumaCalendar from "../ui/components/food_fairs/LumaCalendar";
 import FairCalendar from "../ui/components/food_fairs/FairCalendar";
 

@@ -8,8 +8,8 @@ import {
   Sheet,
   SheetClose,
   SheetHeader,
-} from "../global/Sheet";
-import { Button, CloseButton } from "../global/Button";
+} from "../global/Sheett";
+import { Button, CloseButton } from "../global/Buttonn";
 
 const FoodFairDatesOverlay: React.FC<{
   future_dates: { start_time: number; end_time: number }[];
