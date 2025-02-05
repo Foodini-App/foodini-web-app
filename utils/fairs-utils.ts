@@ -37,19 +37,30 @@ export type FairDate = {
 
 export async function getFairEvents(from_date: Date = new Date(), limit: number = 16): Promise<FairDate[]> {
   const supabase = createClient();
-  // supabase has a type error here in that data returned by joins is not typed correctly
+
   let { data: fair_dates, error } = await supabase
     .from("fair_dates")
-    .select(`id, fair_id, start_time, end_time, fair: fairs (name, id, address, city, state, occurence, images, color)`)
-    .gte('end_time', from_date.toISOString())
-    .order('start_time', { ascending: true })
+    .select(`
+      id,
+      fair_id,
+      start_time,
+      end_time,
+      fair: fairs (id, name, images, address, city, state, occurence, color)
+    `)
+    .gte("end_time", from_date.toISOString())
+    .order("start_time", { ascending: true })
     .limit(limit);
 
   if (error) {
+    console.error("Error fetching food fairs:", error.message);
     throw new Error(`Error fetching food fairs: ${error.message}`);
   }
 
-  return fair_dates as FairDate[];
+  // Ensure `fair` is treated as a single object instead of an array
+  return fair_dates?.map(fair_date => ({
+    ...fair_date,
+    fair: Array.isArray(fair_date.fair) ? fair_date.fair[0] : fair_date.fair // Extract the first item if it's an array
+  })) ?? [];
 }
 
 export async function getFair(fairId: number): Promise<Fair> {

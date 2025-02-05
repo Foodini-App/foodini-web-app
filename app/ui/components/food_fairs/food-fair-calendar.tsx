@@ -15,8 +15,6 @@ const FoodFairCard: React.FC<FoodFairCardProps> = ({ fair_date, date }) => {
     ? `bg-${fair_date.fair.color}`
     : "bg-gray-600";
 
-    console.log(color)
-
   return (
     <FairCard
       key={fair_date.id}
@@ -24,7 +22,7 @@ const FoodFairCard: React.FC<FoodFairCardProps> = ({ fair_date, date }) => {
       fairId={fair_date.fair.id}
       className="w-full"
     >
-      <div className={color}>
+      <div className="bg-orange-600">
         <div className="text-white flex justify-between py-3 px-6 font-medium gap-6">
           <span>
             {date.toLocaleString("default", {

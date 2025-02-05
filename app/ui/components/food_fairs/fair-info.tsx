@@ -127,7 +127,7 @@ const FoodFairInfo: React.FC<FoodFairInfoProps> = async (props) => {
           <img className="object-cover h-full" src={fair.images[0]} />
         </div>
         <div className="w-full bg-white">
-          <div className={bg_color}>
+          <div className="bg-orange-600">
             <div className="text-white flex justify-between p-6 font-medium gap-6">
               <div>
                 <FoodFairDatesOverlay
