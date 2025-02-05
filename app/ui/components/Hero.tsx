@@ -1,4 +1,4 @@
-import { Button } from "./global/Buttonn";
+import { Button } from "./global/Button";
 
 const Hero: React.FC = () => {
   return (
