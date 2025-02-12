@@ -16,7 +16,6 @@ const FoodFairDatesOverlay: React.FC<{
   occurence: string;
 }> = (props) => {
   const next_date = new Date(props.future_dates[0].start_time);
-  console.log(props.future_dates);
 
   return (
     <Sheet>
@@ -44,7 +43,7 @@ const FoodFairDatesOverlay: React.FC<{
         <div className="py-6 text-gray-700 dark:text-gray-400 flex flex-col gap-6">
           {props.future_dates.map((date) => {
             return (
-              <div className="pb-4 border-b border-#CCCCCC">
+              <div className="pb-4 border-b border-#CCCCCC ">
                 <div className="flex flex-row gap-4">
                   <div className="place-content-center">
                     <Icon name="time" size={24} />
@@ -97,7 +96,7 @@ const FoodFairDatesOverlay: React.FC<{
               </div>
               <div>
                 <div className="text-lg font-medium ">About Foodini</div>
-                <div>Here to help you experience new foods</div>
+                <div>Your friendly local food guide</div>
               </div>
             </div>
           </Link>

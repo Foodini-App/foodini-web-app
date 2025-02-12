@@ -4,6 +4,7 @@ import Icon from "@/app/ui/components/global/Iconn";
 import { FairCard } from "./FairCard";
 import { CardContent } from "../dishes/DishCard";
 import { capitalize } from "@/utils/global-utils";
+import Header from "../global/Header";
 
 interface FoodFairCardProps {
   fair_date: FairDate;
@@ -40,7 +41,7 @@ const FoodFairCard: React.FC<FoodFairCardProps> = ({ fair_date, date }) => {
         </div>
         <img
           alt={fair_date.fair.name}
-          className="object-cover h-48 w-full rounded-t-2xl"
+          className="aspect-3/2 object-cover h-36 md:h-full lg:h-64 w-full rounded-t-2xl"
           src={fair_date.fair.images[0]}
         />
       </div>
@@ -54,11 +55,11 @@ const FoodFairCard: React.FC<FoodFairCardProps> = ({ fair_date, date }) => {
   );
 };
 
-const FairCalendar: React.FC = async () => {
-  const fair_dates = await getFairEvents();
+const FairCalendar: React.FC<{ to_date: Date }> = async ({ to_date }) => {
+  const fair_dates = await getFairEvents(undefined, to_date, 16);
 
   return (
-    <div className="pt-2 md:pt-4 px-4">
+    <div className="pt-2 md:pt-4 px-4 md:px-24">
       <div className="grid grid-cols-1 gap-4">
         {fair_dates.reduce((acc, fair_date, index) => {
           const date = new Date(fair_date.start_time);
@@ -79,14 +80,7 @@ const FairCalendar: React.FC = async () => {
               }
             ) !== monthYear
           ) {
-            acc.push(
-              <h2
-                key={`header-${monthYear}`}
-                className="text-xl font-semibold text-gray-700"
-              >
-                {monthYear}
-              </h2>
-            );
+            acc.push(<Header name={monthYear} className="px-0 md:px-0 text-xl font-medium"/>);
           }
 
           acc.push(<FoodFairCard fair_date={fair_date} date={date} />);

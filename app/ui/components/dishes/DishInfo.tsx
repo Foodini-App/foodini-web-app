@@ -172,7 +172,7 @@ const DishInfoOverlay: React.FC = () => {
               </div>
               <div>
                 <div className="text-lg font-medium ">About Foodini</div>
-                <div>Here to help you experience new foods</div>
+                <div>Your friendly local food guide</div>
               </div>
             </div>
           </Link>

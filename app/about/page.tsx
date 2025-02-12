@@ -1,6 +1,6 @@
 const Page: React.FC = () => {
   return <About />;
-}
+};
 
 const About: React.FC = () => {
   return (
@@ -11,15 +11,19 @@ const About: React.FC = () => {
             <p>About Us</p>
           </div>
           <div className="font-medium px-8 md:px-12 pt-8">
-            <p>Foodini’s mission is to connect people through food.</p>
+            <p>Foodini helps people discover new foods.</p>
           </div>
-          <div className="px-8 md:px-12 pt-8">
+          <div className="px-8 md:px-12 pt-8 space-y-4">
             <p>
-              When we venture outside of our comfort zone to try new food, it’s
-              hard to make a confident decision without a trusted friend or
-              guide. We often order only what we’re familiar with. Foodini steps
-              in to help you explore new cuisines and dishes by providing
-              detailed dish information.
+              Stepping out of your food comfort zone can feel a bit
+              daunting—especially without a friendly guide by your side. It's
+              natural to stick with the dishes you know, but Foodini is here to
+              help you explore new flavors with ease!
+            </p>
+            <p>
+              We provide clear, detailed information about dishes and keep you
+              updated on local food fairs, making it simple and fun to try
+              something new.
             </p>
           </div>
         </div>
@@ -43,6 +47,6 @@ const About: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Page;

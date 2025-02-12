@@ -35,10 +35,10 @@ export type FairDate = {
   }
 };
 
-export async function getFairEvents(from_date: Date = new Date(), limit: number = 16): Promise<FairDate[]> {
+export async function getFairEvents(from_date: Date = new Date(), to_date?: Date, limit: number = 16): Promise<FairDate[]> {
   const supabase = createClient();
 
-  let { data: fair_dates, error } = await supabase
+  let query = supabase
     .from("fair_dates")
     .select(`
       id,
@@ -50,6 +50,12 @@ export async function getFairEvents(from_date: Date = new Date(), limit: number 
     .gte("end_time", from_date.toISOString())
     .order("start_time", { ascending: true })
     .limit(limit);
+
+  if (to_date) {
+    query = query.lte("start_time", to_date.toISOString());
+  }
+
+  let { data: fair_dates, error } = await query;
 
   if (error) {
     console.error("Error fetching food fairs:", error.message);
