@@ -2,7 +2,6 @@ import DishList from "@/app/ui/components/dishes/DishList";
 import Hero from "./ui/components/Hero";
 import { getPopularDishes } from "@/utils/dish-utils";
 import Header from "./ui/components/global/Header";
-import LumaCalendar from "./ui/components/food_fairs/LumaCalendar";
 import FairCalendar from "./ui/components/food_fairs/FairCalendar";
 import { Button } from "./ui/components/global/Buttonn";
 
