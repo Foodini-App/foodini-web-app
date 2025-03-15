@@ -4,10 +4,10 @@ const Page: React.FC = () => {
 
 const About: React.FC = () => {
   return (
-    <div className="bg-white md:mx-24 md:my-12 rounded-xl overflow-hidden text-gray-700">
+    <div className="bg-white md:mx-24 md:my-12 rounded-xl overflow-hidden text-gray-900">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="w-full pb-0 lg:pb-12">
-          <div className="text-gray-700 text-3xl font-medium px-8 md:px-12 pt-8">
+          <div className="text-gray-900 text-3xl font-medium px-8 md:px-12 pt-8">
             <p>About Us</p>
           </div>
           <div className="font-medium px-8 md:px-12 pt-8">
@@ -28,7 +28,7 @@ const About: React.FC = () => {
           </div>
         </div>
         <div className="w-full pb-12">
-          <div className="text-gray-700 text-3xl font-medium px-8 md:px-12 pt-8">
+          <div className="text-gray-900 text-3xl font-medium px-8 md:px-12 pt-8">
             <p>Get in Touch</p>
           </div>
           <div className="px-8 md:px-12 pt-8">

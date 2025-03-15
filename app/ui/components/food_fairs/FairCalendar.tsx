@@ -80,7 +80,7 @@ const FairCalendar: React.FC<{ to_date: Date }> = async ({ to_date }) => {
               }
             ) !== monthYear
           ) {
-            acc.push(<Header name={monthYear} className="px-0 md:px-0 text-xl font-medium"/>);
+            acc.push(<h1 className="text-xl font-medium">{monthYear}</h1>);
           }
 
           acc.push(<FoodFairCard fair_date={fair_date} date={date} />);
