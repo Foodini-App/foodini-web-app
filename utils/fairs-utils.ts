@@ -82,6 +82,7 @@ export async function getFair(fairId: number): Promise<Fair> {
     `)
     .eq("id", fairId)
     .gte('fair_dates.end_time', new Date().toISOString())
+    .limit(6, { foreignTable: 'fair_dates' }) // Limit fair_dates to 8
     .single();
 
   if (error) {

@@ -19,7 +19,7 @@ const DishInfo: React.FC<DishInfoProps> = async (props) => {
   const dish = await getDish(props.name);
 
   return (
-    <div className="bg-white md:mx-24 md:my-12 rounded-xl overflow-hidden text-gray-700">
+    <div className="bg-white md:mx-24 md:my-12 rounded-xl overflow-hidden text-gray-900">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="w-full pb-0 lg:pb-12">
           <DishImageContainer imageUrl={dish.images[0]} />
@@ -77,7 +77,7 @@ const DishNameContainer: React.FC<{
       <div className="border-b border-#CCCCCC pb-8">
         {dishName && (
           <div className="flex justify-between items-center pb-3">
-            <div className="text-gray-700 text-4xl font-semibold">
+            <div className="text-gray-900 text-4xl font-semibold">
               {capitalize(dishName)}
             </div>
             {tooltip && (
@@ -104,7 +104,7 @@ const DishInfoContainer: React.FC<{
       <div className="border-b border-#CCCCCC pb-8">
         {title && (
           <div className="flex justify-between items-center pb-3">
-            <div className="text-gray-700 text-lg font-bold ">
+            <div className="text-gray-900 text-lg font-bold ">
               {title.toUpperCase()}
             </div>
             {tooltip && (
@@ -138,11 +138,11 @@ const DishInfoOverlay: React.FC = () => {
           <CloseButton />
         </SheetClose>
         <SheetHeader>
-          <div className="text-3xl font-semibold text-gray-700 dark:text-gray-50 text-center">
+          <div className="text-3xl font-semibold text-gray-900 dark:text-gray-50 text-center">
             Dish Info
           </div>
         </SheetHeader>
-        <div className="py-8 text-gray-700 dark:text-gray-400 flex flex-col gap-8">
+        <div className="py-8 text-gray-900 dark:text-gray-400 flex flex-col gap-8">
           <div className="flex flex-row gap-4">
             <div className="place-content-center">
               <Icon name="ingredientsCircle" size={48} />

@@ -31,25 +31,25 @@ const FoodFairDatesOverlay: React.FC<{
           <Icon name="chevronRight" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="right">
+      <SheetContent side="right" className="overflow-y-auto max-h-screen">
         <SheetClose>
           <CloseButton />
         </SheetClose>
         <SheetHeader>
-          <div className="text-3xl font-semibold text-gray-700 dark:text-gray-50 text-center">
+          <div className="text-3xl font-semibold text-gray-900 dark:text-gray-50 text-center">
             Future Dates
           </div>
         </SheetHeader>
-        <div className="py-6 text-gray-700 dark:text-gray-400 flex flex-col gap-6">
+        <div className="py-6 text-gray-900 dark:text-gray-400 flex flex-col gap-6">
           {props.future_dates.map((date) => {
             return (
-              <div className="pb-4 border-b border-#CCCCCC ">
+              <div className="pb-4 border-b border-#CCCCCC">
                 <div className="flex flex-row gap-4">
                   <div className="place-content-center">
                     <Icon name="time" size={24} />
                   </div>
                   <div>
-                    <div className="text-md font-medium ">
+                    <div className="text-md font-medium">
                       {new Date(date.start_time).toLocaleString("default", {
                         weekday: "long",
                         month: "long",
@@ -79,7 +79,7 @@ const FoodFairDatesOverlay: React.FC<{
                 <Icon name="occurenceCircle" size={48} />
               </div>
               <div>
-                <div className="text-lg font-medium ">
+                <div className="text-lg font-medium">
                   {capitalize(props.occurence)}
                 </div>
                 <div>This is typically a {props.occurence} recurring event</div>
@@ -90,12 +90,12 @@ const FoodFairDatesOverlay: React.FC<{
             href="/about"
             className="rounded-lg overflow-hidden hover:bg-gray-100"
           >
-            <div className=" flex flex-row gap-4">
+            <div className="flex flex-row gap-4">
               <div className="place-content-center">
                 <Icon name="foodiniLogoCircle" size={48} />
               </div>
               <div>
-                <div className="text-lg font-medium ">About Foodini</div>
+                <div className="text-lg font-medium">About Foodini</div>
                 <div>Your friendly local food guide</div>
               </div>
             </div>
@@ -120,7 +120,7 @@ const FairInfo: React.FC<FoodFairInfoProps> = async (props) => {
   const future_dates = fair.fair_dates;
 
   return (
-    <div className="md:mx-36 xl:mx-60 md:my-12 rounded-xl overflow-hidden text-gray-700">
+    <div className="md:mx-36 xl:mx-60 md:my-12 rounded-xl overflow-hidden text-gray-900">
       <div className="grid grid-cols-1 xl:grid-cols-2 h-256">
         <div className="w-full flex items-center justify-center overflow-hidden">
           <img className="object-cover h-full" src={fair.images[0]} />
