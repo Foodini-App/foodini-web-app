@@ -1,7 +1,7 @@
-import DishList from "../ui/components/dishes/dish-list";
+import DishList from "../ui/components/dishes/DishList";
 import { getPopularDishes } from "@/utils/dish-utils";
-import { Header } from "../ui/components/global/header";
-import { CuisineCarousel } from "../ui/components/dishes/cuisine-carousel";
+import Header from "../ui/components/global/Header";
+import CuisineCarousel from "../ui/components/dishes/CuisineCarousel";
 
 const cuisines = [
   {
@@ -42,7 +42,7 @@ const cuisines = [
   },
 ];
 
-export default async function Page() {
+const Page: React.FC = async () => {
   const dishes = await getPopularDishes(3.8);
 
   return (
@@ -52,4 +52,6 @@ export default async function Page() {
       <DishList dishes={dishes} />
     </div>
   );
-}
+};
+
+export default Page;

@@ -1,23 +1,12 @@
-import { Header } from "../ui/components/global/header";
-import { Button } from "../ui/components/global/button";
-import LumaCalendar from "../ui/components/food_fairs/luma-calendar";
+import FairCalendar from "../ui/components/food_fairs/FairCalendar";
 
 export default function Page() {
+  let eight_months_date = new Date();
+  eight_months_date.setMonth(eight_months_date.getMonth() + 8);
+
   return (
-    <div className="flex flex-col md:items-center gap-4">
-      <Header name="Food Fairs" />
-      <div className="px-4 md:px-24">
-        <Button
-          size="default"
-          variant="blue"
-          className="bg-orange-500 text-white px-6 py-4 rounded-md"
-          href="https://lu.ma/calendar/cal-1LXH22G3Y46ZLr9/map"
-          newTab={true}
-        >
-          View map
-        </Button>
-      </div>
-      <LumaCalendar />
+    <div className="flex flex-col md:items-center">
+      <FairCalendar to_date={eight_months_date}/>
     </div>
   );
 }

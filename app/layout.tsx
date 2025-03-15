@@ -1,6 +1,6 @@
 import { GeistSans } from "geist/font/sans";
-import { NavBar } from "@/app/ui/components/global/nav-bar";
-import Footer from "./ui/components/global/footer";
+import { NavBar } from "@/app/ui/components/global/NavBar";
+import Footer from "./ui/components/global/Footer";
 import "./globals.css";
 
 const defaultUrl = process.env.VERCEL_URL
@@ -10,7 +10,8 @@ const defaultUrl = process.env.VERCEL_URL
 export const metadata = {
   metadataBase: new URL(defaultUrl),
   title: "Foodini",
-  description: "",
+  description: "Discover new foods",
+  icon: "/foodini-icon.png",
 };
 
 export default function RootLayout({
@@ -20,11 +21,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={GeistSans.className}>
+      <head>
+        <link
+          rel="icon"
+          href="/foodini-icon.png"
+          sizes="any"
+          type="image/png"
+        />
+      </head>
       <body className="bg-background text-foreground">
         <NavBar />
-        <main className="min-h-screen flex flex-col">
-          {children}
-        </main>
+        <main className="min-h-screen flex flex-col">{children}</main>
         <Footer />
       </body>
     </html>

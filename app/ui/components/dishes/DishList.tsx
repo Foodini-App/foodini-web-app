@@ -1,5 +1,5 @@
 import { DishBasicInfo } from "@/utils/dish-utils";
-import { DishCard, CardContent } from "@/app/ui/components/dishes/dish-card";
+import { DishCard, CardContent } from "@/app/ui/components/dishes/DishCard";
 import { capitalize, capitalizeList } from "@/utils/global-utils";
 
 // type ListType = "popular" | "search";
@@ -19,7 +19,7 @@ export default async function DishList(props: DishListProps) {
               {dish.images && dish.images.length > 0 ? (
                 <img
                   alt={dish.name}
-                  className="w-full h-auto"
+                  className="w-full h-auto rounded-t-2xl"
                   height="200"
                   src={dish.images[0]}
                   style={{
