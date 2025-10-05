@@ -12,9 +12,9 @@ interface FoodFairCardProps {
 }
 
 const FoodFairCard: React.FC<FoodFairCardProps> = ({ fair_date, date }) => {
-  const color = fair_date.fair.color
-    ? `bg-${fair_date.fair.color}`
-    : "bg-gray-600";
+  // const color = fair_date.fair.color
+  //   ? `bg-${fair_date.fair.color}`
+  //   : "bg-gray-600";
 
   return (
     <FairCard
