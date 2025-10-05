@@ -3,7 +3,7 @@ import Hero from "./ui/components/Hero";
 import { getPopularDishes } from "@/utils/dish-utils";
 import Header from "./ui/components/global/Header";
 import FairCalendar from "./ui/components/food_fairs/FairCalendar";
-import { Button } from "./ui/components/global/Buttonn";
+import { Button } from "./ui/components/global/Button";
 
 export default async function Index() {
   let two_month_date = new Date();
@@ -13,7 +13,7 @@ export default async function Index() {
     <div className="flex-1 w-full flex flex-col bg-#FAFAFA">
       <Hero />
       <TrendingDishes />
-      <div className="h-6"/>
+      <div className="h-6" />
       <Header name="Upcoming Food Fairs" />
       <div className="flex flex-col md:items-center gap-6">
         <FairCalendar to_date={two_month_date} />

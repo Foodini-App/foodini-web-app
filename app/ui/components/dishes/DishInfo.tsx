@@ -7,10 +7,10 @@ import {
   Sheet,
   SheetClose,
   SheetHeader,
-} from "../global/Sheett";
-import { Button, CloseButton } from "../global/Buttonn";
+} from "../global/Sheet";
+import { Button, CloseButton } from "../global/Button";
 import Link from "next/link";
-import Icon from "@/app/ui/components/global/Iconn";
+import Icon from "@/app/ui/components/global/Icon";
 interface DishInfoProps {
   name: string;
 }
